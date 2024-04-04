@@ -1,0 +1,58 @@
+pub fn to_readable(ext: &str) -> String {
+    match ext {
+        "py" => "Python".to_string(),
+        "css" => "CSS".to_string(),
+        "html" => "HTML".to_string(),
+        "scss" | "sass" => "Sass".to_string(),
+        "json" => "JSON".to_string(),
+        "js" | "jsx" => "JavaScript".to_string(),
+        "ts" | "tsx" => "TypeScript".to_string(),
+        "png" => "PNG".to_string(),
+        "jpeg" | "jpg" => "JPEG".to_string(),
+        "pdf" => "PDF".to_string(),
+        "gif" => "GIF".to_string(),
+        "svg" => "SVG".to_string(),
+        "mjs" => "JavaScript Module".to_string(),
+        "lock" => "Lock File".to_string(),
+        "sql" => "SQL".to_string(),
+        "xml" => "XML".to_string(),
+        "yml" => "YAML".to_string(),
+        "out" => "Output".to_string(),
+        "rs" => "Rust".to_string(),
+        "tgz" => "Tarball".to_string(),
+        "jsonc" => "JSON with Comments".to_string(),
+        "cjs" => "CommonJS".to_string(),
+        "txt" => "Text".to_string(),
+        "mts" => "MTS".to_string(),
+        "lcov" => "LCOV".to_string(),
+        "crt" => "Certificate".to_string(),
+        "def" => "Definition".to_string(),
+        "ipynb" => "Jupyter Notebook".to_string(),
+        "wasm" => "WebAssembly".to_string(),
+        "dll" => "Dynamic link library".to_string(),
+        "cpp" | "cc" => "C++".to_string(),
+        "sh" => "Shell".to_string(),
+        "h" => "Header file".to_string(),
+        "cts" => "CTS".to_string(),
+        "wgsl" => "WGSL".to_string(),
+        "in" => "Input File".to_string(),
+        "idl" => "IDL".to_string(),
+        "md" | "markdown" => "Markdown".to_string(),
+        "ps1" => "PowerShell Script".to_string(),
+        "plist" => "Property List".to_string(),
+        "cs" | "csproj" => "C#".to_string(),
+        "cshtml" => "Razor".to_string(),
+        "pub" => "Epub".to_string(),
+        "ico" => "Icon".to_string(),
+        "bin" => "Binary".to_string(),
+        "vue" => "Vue".to_string(),
+        "m" => "Methods".to_string(),
+        _ => ext
+            .chars()
+            .next()
+            .unwrap()
+            .to_uppercase()
+            .chain(ext.chars().skip(1))
+            .collect::<String>(),
+    }
+}
